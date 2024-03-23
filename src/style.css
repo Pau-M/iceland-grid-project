@@ -1,26 +1,130 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 11.2%,
+    rgb(11, 132, 145) 91.1%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.hero {
   background: url(https://images.pexels.com/photos/3219773/pexels-photo-3219773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0 auto;
+  background-size: cover;
+
   width: 100%;
 }
-.header h1,
-h2 {
-  color: #ffff;
-  background-color: black;
-  font-weight: 900;
-  font-size: 200px;
+.header {
   text-align: center;
-  letter-spacing: 30px;
   padding-top: 150px;
   margin: 0;
+
+  background-color: #000;
   mix-blend-mode: multiply;
-  font-family: poppins;
+  position: relative;
+}
+.header h1 {
+  color: #ffff;
+  font-weight: 900;
+  font-size: 200px;
+  letter-spacing: 30px;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 .header h2 {
-  color: #ffff;
+  color: white;
   font-size: 46px;
   font-weight: 400;
-  padding: 0px 0px 100px;
+  letter-spacing: 20px;
+  padding-bottom: 30px;
+}
+.button-info {
+  background-color: transparent;
+  font-size: 32px;
+  border-color: #ffffff;
+  padding: 20px 25px;
+  margin-bottom: 50px;
+}
+.button-info a {
+  color: #ffff;
+  text-decoration: none;
+}
+main {
+  color: #ffff;
+  padding: 100px;
+  max-width: 1200px;
+}
+.img-responsive {
+  max-width: 100%;
+}
+.grid-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/lava.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer h3 {
+  color: #ffff;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer a {
+  color: #ffff;
+  text-decoration: none;
+  line-height: 2;
+}
+footer p {
+  color: #ffff;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 40px 80px;
+}
+
+@media (max-width: 1050px) {
+  .header h1 {
+    font-weight: 700;
+    font-size: 80px;
+    letter-spacing: 20px;
+  }
+  .header h2 {
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+  .button-info {
+    font-size: 25px;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 650px) {
+  .header h1 {
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+  .header h2 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  .button-info {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
 }
