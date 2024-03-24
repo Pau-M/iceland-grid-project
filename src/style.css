@@ -12,6 +12,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .hero {
   background: url(https://images.pexels.com/photos/3219773/pexels-photo-3219773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center;
@@ -24,23 +25,21 @@ body {
   text-align: center;
   padding-top: 150px;
   margin: 0;
-
   background-color: #000;
-  mix-blend-mode: multiply;
-  position: relative;
 }
+
 .header h1 {
   color: #ffff;
+  background-color: #000;
   font-weight: 900;
   font-size: 200px;
   letter-spacing: 30px;
   line-height: 1;
   margin: 0;
-  position: relative;
-  z-index: 1;
+  mix-blend-mode: multiply;
 }
 .header h2 {
-  color: white;
+  color: #ffff;
   font-size: 46px;
   font-weight: 400;
   letter-spacing: 20px;
@@ -48,10 +47,12 @@ body {
 }
 .button-info {
   background-color: transparent;
-  font-size: 32px;
+  font-size: 26px;
   border-color: #ffffff;
   padding: 20px 25px;
+  margin-left: auto;
   margin-bottom: 50px;
+  letter-spacing: 3px;
 }
 .button-info a {
   color: #ffff;
@@ -59,8 +60,7 @@ body {
 }
 main {
   color: #ffff;
-  padding: 100px;
-  max-width: 1200px;
+  padding: 90px;
 }
 .img-responsive {
   max-width: 100%;
@@ -69,6 +69,36 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+}
+main h2 {
+  font-size: 34px;
+  letter-spacing: 7px;
+}
+main p {
+  line-height: 2;
+}
+.grid-attractions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  margin: 80px 0;
+}
+.card {
+  background-color: #ffff;
+  color: #000;
+}
+.card-body {
+  padding: 30px;
+}
+.card .btn {
+  display: block;
+  text-align: center;
+  background-color: #000;
+  color: #ffff;
+  text-decoration: none;
+  line-height: 30px;
+  width: 100%;
 }
 footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
