@@ -20,7 +20,10 @@ body {
   margin: 0;
   background-color: #000;
 }
-
+.icon {
+  width: 120px;
+  margin-bottom: 20px;
+}
 .header h1 {
   color: #ffff;
   background-color: #000;
@@ -76,22 +79,27 @@ section {
 
 .img-responsive {
   max-width: 100%;
+  margin: 0 auto;
 }
 .grid-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
-
-.grid-attractions {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  gap: 30px;
+.cards {
   margin: 70px 0;
 }
-.grid-attractions h2 {
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.cards h2 {
   place-self: center;
+}
+.cards p {
+  opacity: 0.7;
 }
 .grid-card {
   display: grid;
@@ -140,7 +148,6 @@ h5 {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-
   gap: 10px;
 }
 .img-filter {
@@ -181,9 +188,14 @@ h5 {
 .grid-embed {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
-.spotify-text {
+.embeds {
   place-self: center;
+}
+.embeds p {
+  opacity: 0.7;
+  margin-bottom: 40px;
 }
 .spotify {
   width: 100%;
@@ -195,6 +207,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 40px 80px;
 }
 footer h3 {
   color: #ffff;
@@ -214,25 +227,72 @@ footer p {
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 40px 80px;
 }
 
 @media (max-width: 1050px) {
+  .container {
+    max-width: 90%;
+  }
   .header h1 {
     font-weight: 700;
     font-size: 80px;
     letter-spacing: 20px;
   }
-  .header h2 {
+  .header h2,
+  .intro h2,
+  .cards h2,
+  .gallery h2,
+  .embeds h2 {
     font-size: 30px;
     letter-spacing: 10px;
+    text-align: center;
+    margin-right: 0;
+  }
+  .cards-title p,
+  .embeds p {
+    text-align: center;
   }
   .header .btn {
     font-size: 25px;
     padding: 10px 15px;
   }
+  main {
+    padding: 50px;
+  }
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .cards {
+    margin: 0 50px;
+  }
+  .grid-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  .i1,
+  .i2,
+  .i3,
+  .i4,
+  .i5,
+  .i6,
+  .i7,
+  .i8,
+  .i9,
+  .i10,
+  .i11,
+  .i12 {
+    grid-column: 1; /* Każdy obraz w pierwszej kolumnie */
+    grid-row: auto; /* Każdy obraz w swoim własnym rzędzie */
+  }
+
+  .img-filter {
+    filter: none;
+  }
+
+  .img-filter:hover {
+    transform: none;
   }
 }
 @media (max-width: 650px) {
@@ -241,16 +301,53 @@ footer p {
     font-size: 50px;
     letter-spacing: 10px;
   }
-  .header h2 {
-    font-size: 20px;
-    letter-spacing: 5px;
-  }
+
   .header .btn {
     font-size: 16px;
     padding: 5px 10px;
   }
+  main {
+    padding: 20px;
+  }
+  .cards {
+    margin: 0 50px;
+  }
+  .grid-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, auto);
+  }
   .grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
+  }
+  .img-filter {
+    filter: none;
+  }
+
+  .img-filter:hover {
+    transform: none;
+  }
+  footer {
+    padding: 30px 50px;
+  }
+}
+@media (max-width: 420px) {
+  section {
+    padding: 10px 0;
+  }
+  .header h2,
+  .intro h2,
+  .cards h2,
+  .gallery h2,
+  .embeds h2 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  .cards {
+    margin: 20px 0;
+  }
+  .cards p,
+  .intro p,
+  .embeds p {
+    font-size: 14px;
   }
 }
